@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:turkcell_seyir/screens/findRoutePage.dart';
 import 'package:turkcell_seyir/screens/routeDetailPage.dart';
+import 'package:turkcell_seyir/widgets/homePageCard.dart';
 
 class HomePage extends StatelessWidget {
   List<String> routeList = [
@@ -86,123 +87,8 @@ class RouteItem extends StatelessWidget {
   }
 }
 
-class HomePageWelcomeCard extends StatelessWidget {
-  const HomePageWelcomeCard({
-    Key key,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 230,
-      //Image.asset("assets/giuseppe-mondi-OIbcmFyMDbo-unsplash.jpg")
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image:
-                  AssetImage("assets/giuseppe-mondi-OIbcmFyMDbo-unsplash.jpg")),
-          //color: Theme.of(context).primaryColor,
-          borderRadius: BorderRadius.circular(15)),
-      child: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Theme.of(context).primaryColor.withOpacity(0.6)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.menu, color: Colors.white, size: 32),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(
-                    Icons.search,
-                    color: Colors.white,
-                    size: 32,
-                  ),
-                )
-              ],
-            ),
-            Container(height: 60, child: Image.asset("assets/4.png")),
-            HomePageButton()
-          ],
-        ),
-      ),
-    );
-  }
-}
 
-class HomePageButton extends StatelessWidget {
-  const HomePageButton({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0) + EdgeInsets.only(bottom: 15),
-      child: FlatButton(
-        onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => FindRoutePage(),
-              ));
-        },
-        child: Container(
-          height: 45,
-          width: 280,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: Theme.of(context).buttonColor),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Sırala",
-                        style: TextStyle(
-                            fontFamily: "hkn",
-                            color: Colors.white,
-                            fontSize: 18)),
-                  ),
-                  Icon(Icons.sort, color: Colors.white, size: 22)
-                ],
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Filtrele",
-                        style: TextStyle(
-                            fontFamily: "hkn",
-                            color: Colors.white,
-                            fontSize: 18)),
-                  ),
-                  CircleAvatar(
-                    maxRadius: 9,
-                    child: Text("4",
-                        style: TextStyle(
-                            fontFamily: "hkn",
-                            color: Colors.white,
-                            fontSize: 12)),
-                    backgroundColor: Theme.of(context).primaryColor,
-                  )
-                ],
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 /*
 class HomePage extends StatefulWidget {
