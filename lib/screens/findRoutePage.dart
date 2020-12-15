@@ -75,7 +75,7 @@ class _FindRoutePageState extends State<FindRoutePage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("Şehir Seçiniz"),
+                  child: Text("Şehir Seçiniz", style: TextStyle(color: Colors.white),),
                 ),
                 DirectSelect(
                   itemExtent: 40.0,
@@ -90,7 +90,7 @@ class _FindRoutePageState extends State<FindRoutePage> {
                 SizedBox(height: 40,),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("Turizm Tipi Seçiniz"),
+                  child: Text("Turizm Tipi Seçiniz" , style: TextStyle(color: Colors.white)),
                 ),
                 DirectSelect(
                   itemExtent: 40.0,
@@ -105,7 +105,7 @@ class _FindRoutePageState extends State<FindRoutePage> {
                 SizedBox(height: 40,),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("Gezi Süresini Seçiniz"),
+                  child: Text("Gezi Süresini Seçiniz", style: TextStyle(color: Colors.white)),
                 ),
                 DirectSelect(
                   itemExtent: 40.0,
